@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Calculator</h1><br/>
+    <table>
+        <tr>
+            <td colspan="2"><input id="Num1"></td>
+            <td colspan="2"><input id="Num2"></td>
+        </tr>
+        <tr>
+            <td><button type="button" onclick="Add();">Addition(+)</button></td>
+            <td><button type="button" onclick="Sub();">Addition(-)</button></td>
+            <td><button type="button" onclick="Mul();">Addition(*)</button></td>
+            <td><button type="button" onclick="Div();">Addition(/)</button></td>
+        </tr>
+        <tr>
+            <td colspan="4"><i id="result">Result :</i></td>
+        </tr>
+    </table>
+    <script>
+        function Add() {
+            let Num1 = document.getElementById("Num1").value;
+            let Num2 = document.getElementById("Num2").value;
+            Num1 = parseInt(Num1);
+            Num2 = parseInt(Num2);
+            let add = Num1 + Num2;
+            document.getElementById("result").innerHTML = "Result : "+Num1+" + "+Num2+" = "+add;
+        }
+        function Sub() {
+            let Num1 = document.getElementById("Num1").value;
+            let Num2 = document.getElementById("Num2").value;
+            Num1 = parseInt(Num1);
+            Num2 = parseInt(Num2);
+            let sub = Num1 - Num2;
+            document.getElementById("result").innerHTML = "Result : "+Num1+" - "+Num2+" = "+sub;
+        }
+        function Mul() {
+            let Num1 = document.getElementById("Num1").value;
+            let Num2 = document.getElementById("Num2").value;
+            Num1 = parseInt(Num1);
+            Num2 = parseInt(Num2);
+            let mul = Num1 * Num2;
+            document.getElementById("result").innerHTML = "Result : "+Num1+" * "+Num2+" = "+mul;
+        }
+        function Div() {
+            let Num1 = document.getElementById("Num1").value;
+            let Num2 = document.getElementById("Num2").value;
+            Num1 = parseInt(Num1);
+            Num2 = parseInt(Num2);
+            let div = Num1 / Num2;
+            document.getElementById("result").innerHTML = "Result : "+Num1+" / "+Num2+" = "+div;
+        }
+    </script>
+</body>
+</html>
